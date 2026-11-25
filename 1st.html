@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Travel Guide</title>
+</head>
+<body bgcolor="lightblue">
+
+<div id="login">
+<center>
+<h2>Login</h2>
+<input id="user" placeholder="Username"><br><br>
+<input id="pass" type="password" placeholder="Password"><br><br>
+<button onclick="login()">Login</button>
+</center>
+</div>
+
+<div id="content" style="display:none">
+<center><h1>WORLD TRAVEL GUIDE</h1></center>
+<hr>
+
+<h2>1. India</h2>
+<img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400" width="250">
+<p>India is famous for the Taj Mahal and culture.</p>
+<a href="https://www.incredibleindia.gov.in/">Visit India</a>
+
+<h2>2. Japan</h2>
+<img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?w=400" width="250">
+<p>Japan is famous for Mount Fuji and cherry blossoms.</p>
+<a href="https://www.japan.travel/">Visit Japan</a>
+
+<h2>3. France</h2>
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=400" width="250">
+<p>France is famous for the Eiffel Tower.</p>
+<a href="https://www.france.fr/">Visit France</a>
+
+<br><br><button onclick="logout()">Logout</button>
+</div>
+
+<script>
+function login() {
+ if(user.value && pass.value) {
+  document.getElementById("login").style.display="none";
+  document.getElementById("content").style.display="block";
+ } else {
+  alert("Enter username and password");
+ }
+}
+function logout() {
+ location.reload();
+}
+</script>
+</body>
+</html>
